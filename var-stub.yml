@@ -1,0 +1,13 @@
+---
+# Used to fake these parameters, so that the official ops files have something to delete.
+- type: replace
+  path: /variables/name=blobstore_admin_users_password?/type
+  value: password
+
+- type: replace
+  path: /variables/name=blobstore_secure_link_secret?/type
+  value: password
+
+- type: replace
+  path: /variables/name=blobstore_tls?/type
+  value: password

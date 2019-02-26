@@ -1,0 +1,10 @@
+states_update_mode: replace
+states:
+- name: enable-s3-blobstore
+  log_path: /data/logs/enable-s3-blobstore.log
+  script: scripts/enable-s3.sh
+
+call_state:
+  states_to_rerun: [ "deploy-cf" ]
+  previous_states: [ "prepare-cf" ]
+  next_states: [ "deploy-cf" ]
